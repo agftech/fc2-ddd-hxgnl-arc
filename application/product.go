@@ -27,3 +27,11 @@ func (p *Product) Enable() error {
 	}
 	return errors.New("the price must be greater than zero to enable the product")
 }
+
+func (p *Product) Disable() error {
+	if p.Price == 0 {
+		p.Status = DISABLED
+		return nil
+	}
+	return errors.New("the price must be zero in order to have the product disabled")
+}
