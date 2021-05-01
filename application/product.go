@@ -12,6 +12,12 @@ func init() {
 
 type ProductInterface interface {
 	Enable() error
+	Disable() error
+	IsValid() (bool, error)
+	GetID() string
+	GetName() string
+	GetStatus() string
+	GetPrice() float64
 }
 
 const (
