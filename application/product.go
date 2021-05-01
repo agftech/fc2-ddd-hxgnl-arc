@@ -62,3 +62,19 @@ func (p *Product) IsValid() (bool, error) {
 	}
 	return true, err
 }
+
+func (p *Product) GetID() string {
+	return p.ID
+}
+
+func (p *Product) GetName() string {
+	return p.Name
+}
+
+func (p *Product) GetStatus() string {
+	return p.Status
+}
+
+func (p *Product) GetPrice() float64 {
+	return p.Price
+}
